@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⚠️ AVISO DE SEGURANÇA</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:linear-gradient(135deg,#ff6b6b,#ee5a52);min-height:100vh;display:flex;align-items:center;justify-content:center;color:#fff}
+.container{background:rgba(255,255,255,0.95);color:#333;max-width:550px;margin:20px;padding:25px;border-radius:15px;box-shadow:0 15px 50px rgba(0,0,0,0.3);text-align:center}
+.icon{font-size:50px;color:#ff4757;margin-bottom:10px}
+h1{color:#ff4757;font-size:2em;margin-bottom:10px;font-weight:bold}
+.subtitle{font-size:1.1em;color:#e74c3c;margin-bottom:15px;font-weight:600}
+.text{font-size:0.95em;line-height:1.4;color:#555;margin-bottom:15px}
+.fake{background:#ffe6e6;color:#c0392b;padding:8px 12px;border-radius:6px;font-family:monospace;font-weight:bold;margin:8px 0;border-left:4px solid #e74c3c}
+.real{background:#e8f5e8;color:#27ae60;padding:8px 12px;border-radius:6px;font-family:monospace;font-weight:bold;margin:8px 0;border-left:4px solid #27ae60}
+.btn{padding:10px 20px;border:none;border-radius:20px;font-size:0.9em;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block;margin:10px}
+.btn-safe{background:linear-gradient(45deg,#28a745,#20c997);color:white}
+.btn-report{background:linear-gradient(45deg,#dc3545,#e74c3c);color:white}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="icon">⚠️</div>
+<h1>ALERTA DE SEGURANÇA!</h1>
+<div class="subtitle">Site malicioso detectado!</div>
+<div class="text">Você foi redirecionado de um site <strong>FALSO</strong> que pode estar tentando roubar suas informações.</div>
+<div class="fake">❌ SITE FALSO: rubiniot.com.br</div>
+<div class="real">✅ SITE OFICIAL: rubinot.com.br</div>
+<div class="text"><strong>Se você digitou informações no site falso, altere suas senhas imediatamente!</strong></div>
+<a href="https://rubinot.com.br" class="btn btn-safe">🏠 Site Oficial</a>
+<div class="footer">
+<small>Esta página foi gerada automaticamente pelo nosso sistema de proteção.</small>
+</div>
+<script>
+// Previne iframe
+if(window!==window.top)window.top.location=window.location;
+// Limpa histórico para não voltar ao site malicioso
+if(window.history.replaceState)window.history.replaceState(null,null,window.location.href);
+// Log para monitoramento
+console.warn('SECURITY: Malicious referrer blocked:',document.referrer);
+</script>
+</div>
+</body>
+</html>
